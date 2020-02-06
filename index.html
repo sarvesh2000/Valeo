@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <!--jQuery-->
     <script src="assets/js/jquery-3.4.1.js"></script>
+    <!--Table to JSON-->
+    <script src="https://cdn.jsdelivr.net/npm/table-to-json@1.0.0/lib/jquery.tabletojson.min.js" integrity="sha256-H8xrCe0tZFi/C2CgxkmiGksqVaxhW0PFcUKZJZo1yNU=" crossorigin="anonymous"></script>
+    <!---->
 </head>
 <body>
     <h1 class="text-center">Excel Generator</h1>
@@ -39,16 +42,16 @@
 
     <!--Read the table-->
     <script>
-        $(document).ready(function(){
+
+        /*$(document).ready(function(){
             $("table tbody tr").each(function(rowIndex){
                 var line='';
                 $.each(this.cells,function(cellIndex, cell){
-                    console.log(cell);
                     line+=cell.textContent;
                 });
                 alert(line);
             });
-        });
+        });*/
         /*var table = document.querySelector("#one");
 for (var i = 0, row; row = table.rows[i]; i++) {
    //iterate through rows
@@ -61,6 +64,8 @@ for (var i = 0, row; row = table.rows[i]; i++) {
      console.log(value);
    }  
 }*/
+  // Basic Usage
+  var table = $('#example-table').tableToJSON();
     </script>
 </body>
 </html>
