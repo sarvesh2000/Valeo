@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Excel Generator</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!--jQuery-->
+    <script src="assets/js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h1 class="text-center">Excel Generator</h1>
+    <script>
+        $(document).ready(function() {
+    $('#load').load('report1.html');
+});
+    </script>
+    <span id="load"></span>
+
+    <!--Bootstrap JS-->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--HTML to Excel Script-->
+    <script src="assets/js/jquery.table2excel.js"></script>
+    <script>
+        $(function() {
+    var colCount = 0;
+    $('tr:nth-child(1) td').each(function () {
+        if ($(this).attr('colspan')) {
+            colCount += +$(this).attr('colspan');
+        } else {
+            colCount++;
+        }
+        alert(colCount);
+    });
+});
+    </script>
+</body>
+</html>
