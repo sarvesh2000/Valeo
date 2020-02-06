@@ -23,7 +23,7 @@
     <script src="assets/js/bootstrap.js"></script>
     <!--HTML to Excel Script-->
     <script src="assets/js/jquery.table2excel.js"></script>
-    <script>
+    <!--<script>
         $(function() {
     var colCount = 0;
     $('tr:nth-child(1) td').each(function () {
@@ -35,6 +35,21 @@
         alert(colCount);
     });
 });
+    </script>-->
+
+    <!--Read the table-->
+    <script>
+        var table = document.querySelector("tbody");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+   for (var j = 0, col; col = row.cells[j]; j++) {
+     //iterate through columns
+     //columns would be accessed using the "col" variable assigned in the for loop
+     var value=col.innerHTML;
+     console.log(value);
+   }  
+}
     </script>
 </body>
 </html>
