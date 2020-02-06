@@ -43,6 +43,7 @@
             $("table tbody tr").each(function(rowIndex){
                 var line='';
                 $.each(this.cells,function(cellIndex, cell){
+                    console.log(cell);
                     line+=cell.textContent;
                 });
                 alert(line);
